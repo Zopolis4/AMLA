@@ -2,7 +2,7 @@
 // @name	Automatic Mediafire Link Archiver
 // @namespace      Zopolis4
 // @description    Automatically archives all mediafire links on pages you visit by sending them to ArchiveTeam.
-// @version	1.0.0
+// @version	1.0.1
 // @match	*
 // @run-at document-start
 // ==/UserScript==
@@ -22,17 +22,13 @@
 			});
 			console.log("Sent " + location.href + " To https://urls.ajay.app/");
 		}
-	}, false);
+	});
 
 
 
 	window.addEventListener("load", function() {
 		for (var elements1 = document.getElementsByTagName("a"), i = elements1.length - 1; i >= 0; i--) {
-			if (location.hostname == "www.mediafire.com") {
-				return;
-			}
 			if (elements1[i].hostname == "www.mediafire.com" || elements1[i].hostname == "www.mfi.re") {
-				var adrs2 = "http://example.com" + elements1[i].href;
 				fetch("https://urls.ajay.app/api/submitURLs", {
 				  method: "POST",
 				  body: JSON.stringify({
