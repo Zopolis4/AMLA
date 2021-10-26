@@ -1,6 +1,6 @@
 {
     "name": "Automatic Mediafire Link Archiver",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "Automatically archives all mediafire links on pages you visit by sending them to ArchiveTeam.",
     "manifest_version": 3,
     "content_scripts": [{
